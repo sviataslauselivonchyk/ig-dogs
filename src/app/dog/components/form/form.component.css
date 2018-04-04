@@ -1,0 +1,62 @@
+.form {
+  margin: 0 auto;
+  padding: 20px 30px 20px 30px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.form label > span {
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form select {
+  border: 1px solid #cccccc;
+  height: 20px;
+  line-height: 15px;
+  padding: 5px;
+  width: 223px;
+  border-radius: 4px;
+}
+
+.form select {
+  width: 235px;
+  height: 35px;
+  line-height: 15px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container .button {
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px 25px 10px 25px;
+  border-radius: 4px;
+}
+
+.button-container .button:hover {
+  background-color: #EBEBEB;
+  border-color: #ADADAD;
+}
+
+.ng-valid, .ng-valid {
+  border-left: 5px solid #42A948 !important;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442 !important;
+}

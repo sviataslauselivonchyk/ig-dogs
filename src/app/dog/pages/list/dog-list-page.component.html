@@ -1,0 +1,18 @@
+<pre>
+                                                        (\
+                                                       (\_\_^__o
+                                                ___     `-'/ `_/
+                                               '`--\______/  |
+                                          '        /         |
+                                      `    .  '  -`/.------'\^-'
+</pre>
+
+<div *ngIf="loading">
+  Wait! it's a loading...
+</div>
+
+<dog-list
+  [dogs]="dogsList"
+  (editDog)="onEditDog($event)"
+  (deleteDog)="onDeleteDog($event)"
+></dog-list>

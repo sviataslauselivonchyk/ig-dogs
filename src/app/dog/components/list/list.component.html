@@ -1,0 +1,25 @@
+<div *ngIf="dogs?.length === 0">
+  There is no dogs in the list.
+</div>
+
+<table *ngIf="dogs?.length > 0">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Race</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let item of dogs">
+    <td>{{ item.name }}</td>
+    <td>{{ item.age }}</td>
+    <td>{{ item.race }}</td>
+    <td>
+      <dog-button (click)="onEditDog(item.id)">
+        Edit
+      </dog-button>
+      <dog-button (customClick)="onDeleteDog(item.id)">
+        Delete
+      </dog-button>
+    </td>
+  </tr>
+</table>

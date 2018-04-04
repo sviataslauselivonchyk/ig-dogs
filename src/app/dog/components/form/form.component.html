@@ -1,0 +1,35 @@
+<form
+  class="form"
+  [formGroup]="dogForm"
+  (submit)="onSubmit($event)">
+  <label>
+    <span>Name:</span>
+    <input
+      type="text"
+      placeholder="Type here..."
+      formControlName="name"/>
+  </label>
+
+  <label>
+    <span>Age:</span>
+    <input
+      type="number"
+      placeholder="Type here..."
+      formControlName="age"/>
+  </label>
+
+  <label>
+    <span>Race:</span>
+    <select formControlName="race">
+      <option value="">Select dog's race</option>
+      <option
+        *ngFor="let race of races"
+        [value]="race.key">{{ race.value }}
+      </option>
+    </select>
+  </label>
+
+  <div class="button-container">
+    <button type="submit" class="button">Save</button>
+  </div>
+</form>
